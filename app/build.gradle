@@ -47,8 +47,8 @@ dependencies {
 
     implementation Dependencies.HILT_ANDROID
     implementation Dependencies.DAGGER_HILT_LIFECYCLE_VM
-    implementation Dependencies.HILT_ANDROID_COMPILER
-    implementation Dependencies.HILT_COMPILER
+    kapt Dependencies.HILT_ANDROID_COMPILER
+    kapt Dependencies.HILT_COMPILER
 
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
