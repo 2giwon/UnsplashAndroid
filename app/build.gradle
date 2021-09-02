@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+    implementation project(":data")
+    implementation project(":domain")
 
     implementation Dependencies.KOTLIN_STDLIB
     implementation Dependencies.CORE_KTX
