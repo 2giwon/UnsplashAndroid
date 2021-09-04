@@ -9,5 +9,7 @@ java {
 }
 
 dependencies {
+    implementation project(":domain")
+
     implementation Dependencies.KOTLIN_STDLIB
 }
