@@ -1,5 +1,7 @@
 package com.egiwon.data
 
-internal interface ImageDataSource {
+import com.egiwon.data.response.RandomImageResponse
 
+internal interface ImageDataSource {
+    suspend fun fetchRandomImages(): RandomImageResponse
 }
