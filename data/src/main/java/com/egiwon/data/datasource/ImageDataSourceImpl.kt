@@ -1,4 +1,6 @@
 package com.egiwon.data.datasource
 
-class ImageDataSourceImpl {
+import com.egiwon.data.ImageDataSource
+
+internal class ImageDataSourceImpl : ImageDataSource {
 }

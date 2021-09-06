@@ -1,4 +1,5 @@
 package com.egiwon.data
 
-interface ImageDataSource {
+internal interface ImageDataSource {
+
 }
