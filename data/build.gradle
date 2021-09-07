@@ -15,7 +15,6 @@ dependencies {
 
     implementation NetworkConfig.RETROFIT
     implementation NetworkConfig.LOGGING_INTERCEPTER
-    implementation NetworkConfig.RXJAVA_ADAPTER
     implementation NetworkConfig.GSON
 
     implementation Dependencies.COROUTINE
