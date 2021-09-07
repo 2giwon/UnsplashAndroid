@@ -22,17 +22,12 @@ object AndroidConfig {
 
 object Dependencies {
     private const val HILT_JETPACK_VER = "1.0.0-alpha03"
-    private const val RXJAVA_VER = "2.2.16"
 
     const val HILT_ANDROID = "com.google.dagger:hilt-android:${Version.HILT}"
     const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
 
     const val DAGGER_HILT_LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
     const val HILT_COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
-
-    const val RXJAVA = "io.reactivex.rxjava2:rxjava:$RXJAVA_VER"
-    const val RX_ANDROID = "io.reactivex.rxjava2:rxandroid:2.1.1"
-    const val RX_KOTLIN = "io.reactivex.rxjava2:rxkotlin:2.4.0"
 
     const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Version.KOTLIN_VER}"
     const val CORE_KTX = "androidx.core:core-ktx:1.6.0"
@@ -48,7 +43,6 @@ object NetworkConfig {
     const val RETROFIT = "com.squareup.retrofit2:retrofit:$RETROFIT_VER"
     const val LOGGING_INTERCEPTER = "com.squareup.okhttp3:logging-interceptor:4.9.0"
     const val GSON = "com.squareup.retrofit2:converter-gson:$RETROFIT_VER"
-    const val RXJAVA_ADAPTER = "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VER"
 }
 
 object TestConfig {
