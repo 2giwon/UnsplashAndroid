@@ -7,7 +7,5 @@ import retrofit2.http.Query
 interface RandomImageService {
 
     @GET("/photos/random")
-    suspend fun fetchRandomImage(
-        @Query("client_id") clientId: String = "fwys9Zgd8cBBdZmwjdOQSKtfpotT3vVZJNnLxYMBhvk"
-    ): RandomImageResponse
+    suspend fun fetchRandomImage(): RandomImageResponse
 }

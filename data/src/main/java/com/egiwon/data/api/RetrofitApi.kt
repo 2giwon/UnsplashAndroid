@@ -1,6 +1,7 @@
 package com.egiwon.data.api
 
 import com.egiwon.data.datasource.RandomImageService
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -13,15 +14,26 @@ object RetrofitApi {
 
     private val gsonConverterFactory: GsonConverterFactory = GsonConverterFactory.create()
 
+
     private val httpClient = OkHttpClient.Builder()
-        .addInterceptor(httpLoggingInterceptor)
-        .build()
+            .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(Interceptor { chain ->
+                val url = chain.request()
+                        .url
+                        .newBuilder()
+                        .addQueryParameter("client_id", "fwys9Zgd8cBBdZmwjdOQSKtfpotT3vVZJNnLxYMBhvk")
+                        .build()
+
+                val requestBuilder = chain.request().newBuilder().url(url)
+                chain.proceed(requestBuilder.build())
+            })
+            .build()
 
     private val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl("https://api.unsplash.com/")
-        .client(httpClient)
-        .addConverterFactory(gsonConverterFactory)
-        .build()
+            .baseUrl("https://api.unsplash.com/")
+            .client(httpClient)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
 
     val randomImageService: RandomImageService = retrofit.create(RandomImageService::class.java)
 }
