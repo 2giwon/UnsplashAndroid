@@ -1,5 +1,7 @@
 package com.egiwon.data
 
-internal class ImageRepositoryImpl {
-    
+import com.egiwon.domain.ImageRepository
+
+internal class ImageRepositoryImpl: ImageRepository {
+
 }
