@@ -33,6 +33,8 @@ object Dependencies {
     const val CORE_KTX = "androidx.core:core-ktx:1.6.0"
     const val MATERIAL = "com.google.android.material:material:1.4.0"
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.1.0"
+
+    const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
 }
 
 object NetworkConfig {
