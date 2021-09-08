@@ -14,19 +14,9 @@ object RetrofitApi {
 
     private val gsonConverterFactory: GsonConverterFactory = GsonConverterFactory.create()
 
-
     private val httpClient = OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
-            .addInterceptor(Interceptor { chain ->
-                val url = chain.request()
-                        .url
-                        .newBuilder()
-                        .addQueryParameter("client_id", "fwys9Zgd8cBBdZmwjdOQSKtfpotT3vVZJNnLxYMBhvk")
-                        .build()
-
-                val requestBuilder = chain.request().newBuilder().url(url)
-                chain.proceed(requestBuilder.build())
-            })
+            .addInterceptor(InterceptorModule.getQueryInterceptor())
             .build()
 
     private val retrofit: Retrofit = Retrofit.Builder()
