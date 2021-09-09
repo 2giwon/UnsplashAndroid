@@ -10,4 +10,8 @@ java {
 
 dependencies {
     implementation Dependencies.KOTLIN_STDLIB
+
+    implementation Dependencies.HILT_CORE
+
+    implementation Dependencies.COROUTINE
 }
