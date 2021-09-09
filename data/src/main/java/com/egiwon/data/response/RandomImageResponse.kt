@@ -21,3 +21,17 @@ data class RandomImageResponse(
     @SerializedName("height")
     val height: Int = 0
 )
+
+fun RandomImageResponse.mapToImage(): Image =
+    Image(
+        id = id,
+        likes = likes,
+        fullImageUrl = urls.full,
+        regularImageUrl = urls.regular,
+        smallImageUrl = urls.small,
+        thumb = urls.thumb,
+        views = views,
+        width = width,
+        height = height
+    )
+
