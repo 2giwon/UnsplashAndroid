@@ -28,6 +28,7 @@ object Dependencies {
 
     const val DAGGER_HILT_LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
     const val HILT_COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
+    const val HILT_CORE = "com.google.dagger:hilt-core:${Version.HILT}"
 
     const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Version.KOTLIN_VER}"
     const val CORE_KTX = "androidx.core:core-ktx:1.6.0"
