@@ -41,9 +41,12 @@ internal class NetworkModule {
         converterFactory: GsonConverterFactory,
         client: OkHttpClient
     ): Retrofit = Retrofit.Builder()
-        .baseUrl("https://api.unsplash.com/")
+        .baseUrl(BASE_URL)
         .client(client)
         .addConverterFactory(converterFactory)
         .build()
 
+    companion object {
+        private const val BASE_URL = "https://api.unsplash.com/"
+    }
 }
