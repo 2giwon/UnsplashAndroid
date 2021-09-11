@@ -1,6 +1,5 @@
 package com.egiwon.data.di
 
-import com.egiwon.data.datasource.RandomImageService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -32,9 +31,9 @@ internal class NetworkModule {
         loggingInterceptor: HttpLoggingInterceptor,
         interceptor: Interceptor
     ) = OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .addInterceptor(interceptor)
-            .build()
+        .addInterceptor(loggingInterceptor)
+        .addInterceptor(interceptor)
+        .build()
 
     @Provides
     @Singleton
