@@ -48,8 +48,4 @@ class NetworkModule {
         .addConverterFactory(converterFactory)
         .build()
 
-    @Provides
-    @Singleton
-    fun provideRandomImageService(retrofit: Retrofit): RandomImageService =
-        retrofit.create(RandomImageService::class.java)
 }
