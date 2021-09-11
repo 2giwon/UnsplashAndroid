@@ -1,6 +1,6 @@
-package com.egiwon.domain.entity
+package com.egiwon.domain.model
 
-data class Image(
+data class PhotoData(
     val id: String = "",
     val likes: Int = 0,
     val fullImageUrl: String = "",

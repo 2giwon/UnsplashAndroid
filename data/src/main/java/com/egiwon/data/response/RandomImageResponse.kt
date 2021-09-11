@@ -1,6 +1,6 @@
 package com.egiwon.data.response
 
-import com.egiwon.domain.entity.Image
+import com.egiwon.domain.model.PhotoData
 import com.google.gson.annotations.SerializedName
 
 data class RandomImageResponse(
@@ -22,8 +22,8 @@ data class RandomImageResponse(
     val height: Int = 0
 )
 
-fun RandomImageResponse.mapToImage(): Image =
-    Image(
+fun RandomImageResponse.mapToImage(): PhotoData =
+    PhotoData(
         id = id,
         likes = likes,
         fullImageUrl = urls.full,
