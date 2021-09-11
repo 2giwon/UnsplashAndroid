@@ -14,5 +14,5 @@ internal abstract class DataSourceModule {
 
     @Binds
     @Singleton
-    abstract fun provideImageDataSource(randomImageService: RandomImageService): ImageDataSource
+    abstract fun bindImageDataSource(randomImageService: RandomImageService): ImageDataSource
 }

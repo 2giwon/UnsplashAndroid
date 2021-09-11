@@ -16,5 +16,5 @@ internal abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun provideImageRepository(imageDataSource: ImageDataSource): ImageRepository
+    abstract fun bindImageRepository(imageDataSource: ImageDataSource): ImageRepository
 }
