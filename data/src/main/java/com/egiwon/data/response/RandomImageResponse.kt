@@ -3,7 +3,7 @@ package com.egiwon.data.response
 import com.egiwon.domain.model.PhotoData
 import com.google.gson.annotations.SerializedName
 
-data class RandomImageResponse(
+data class RandomImageResponse (
     @SerializedName("description")
     val description: Any = Any(),
     @SerializedName("id")
@@ -20,18 +20,22 @@ data class RandomImageResponse(
     val width: Int = 0,
     @SerializedName("height")
     val height: Int = 0
-)
+): DataToDomainMapper<PhotoData> {
+    override fun toDomain(): PhotoData {
+        return PhotoData(
+            id = id,
+            likes = likes,
+            fullImageUrl = urls.full,
+            regularImageUrl = urls.regular,
+            smallImageUrl = urls.small,
+            thumb = urls.thumb,
+            views = views,
+            width = width,
+            height = height
+        )
+    }
+}
 
-fun RandomImageResponse.mapToImage(): PhotoData =
-    PhotoData(
-        id = id,
-        likes = likes,
-        fullImageUrl = urls.full,
-        regularImageUrl = urls.regular,
-        smallImageUrl = urls.small,
-        thumb = urls.thumb,
-        views = views,
-        width = width,
-        height = height
-    )
+
+
 
