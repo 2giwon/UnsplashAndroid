@@ -31,8 +31,7 @@ class NetworkModule {
     fun provideHttpClient(
         loggingInterceptor: HttpLoggingInterceptor,
         interceptor: Interceptor
-    ) =
-        OkHttpClient.Builder()
+    ) = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .addInterceptor(interceptor)
             .build()
