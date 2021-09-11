@@ -3,6 +3,7 @@ package com.egiwon.data.di
 import com.egiwon.data.ImageDataSource
 import com.egiwon.data.ImageRepositoryImpl
 import com.egiwon.domain.ImageRepository
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,10 +12,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class RepositoryModule {
+abstract class RepositoryModule {
 
-    @Provides
+    @Binds
     @Singleton
-    fun provideImageRepository(imageDataSource: ImageDataSource): ImageRepository =
-        ImageRepositoryImpl(imageDataSource)
+    abstract fun provideImageRepository(imageDataSource: ImageDataSource): ImageRepository
 }
