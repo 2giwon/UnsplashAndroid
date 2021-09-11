@@ -3,7 +3,7 @@ package com.egiwon.data.response
 import com.egiwon.domain.model.PhotoData
 import com.google.gson.annotations.SerializedName
 
-data class RandomImageResponse(
+internal data class RandomImageResponse(
     @SerializedName("description")
     val description: Any = Any(),
     @SerializedName("id")
