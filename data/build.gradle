@@ -18,4 +18,6 @@ dependencies {
     implementation NetworkConfig.GSON
 
     implementation Dependencies.COROUTINE
+
+    implementation Dependencies.HILT_CORE
 }
