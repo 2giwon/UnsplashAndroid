@@ -1,7 +1,7 @@
 package com.egiwon.data.di
 
 import com.egiwon.data.ImageDataSource
-import com.egiwon.data.datasource.RandomImageService
+import com.egiwon.data.ImageDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,5 +14,5 @@ internal abstract class DataSourceModule {
 
     @Binds
     @Singleton
-    abstract fun bindImageDataSource(randomImageService: RandomImageService): ImageDataSource
+    abstract fun bindImageDataSource(imageDataSource: ImageDataSourceImpl): ImageDataSource
 }
