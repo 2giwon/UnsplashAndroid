@@ -47,10 +47,14 @@ dependencies {
     implementation Dependencies.MATERIAL
     implementation Dependencies.CONSTRAINT_LAYOUT
 
+    implementation Dependencies.FRAGMENT_KTX
+
     implementation Dependencies.HILT_ANDROID
-    implementation Dependencies.DAGGER_HILT_LIFECYCLE_VM
-    kapt Dependencies.HILT_ANDROID_COMPILER
     kapt Dependencies.HILT_COMPILER
+
+    implementation Dependencies.GLIDE
+
+    implementation Dependencies.COROUTINE
 
     testImplementation TestConfig.JUNIT_JUPITER_API
     testRuntimeOnly TestConfig.JUNIT_JUPITER_ENGINE
