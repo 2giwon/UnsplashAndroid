@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'kotlin'
+    id 'kotlin-kapt'
 }
 
 java {
@@ -12,6 +13,7 @@ dependencies {
     implementation Dependencies.KOTLIN_STDLIB
 
     implementation Dependencies.HILT_CORE
+    kapt Dependencies.HILT_COMPILER
 
     implementation Dependencies.COROUTINE
 }
