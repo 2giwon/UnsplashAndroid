@@ -5,8 +5,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
-import com.bumptech.glide.Glide
 import com.egiwon.unsplashandroid.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
