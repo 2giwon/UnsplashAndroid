@@ -19,19 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.fabRandomImage.setOnClickListener {
-            viewModel.getRandomImage()
-        }
-
-        viewModel.getRandomImage()
-        setObserve()
+        fetchRandomImage()
     }
 
-    private fun setObserve() {
-        viewModel.image.observe(this) {
-            Glide.with(binding.ivImage)
-                .load(it.smallImageUrl)
-                .into(binding.ivImage)
-        }
+    private fun fetchRandomImage() {
+        viewModel.getRandomImage()
     }
 }
