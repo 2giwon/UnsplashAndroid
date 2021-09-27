@@ -21,8 +21,6 @@ object AndroidConfig {
 }
 
 object Dependencies {
-    private const val GLIDE_VER = "4.12.0"
-
     const val HILT_ANDROID = "com.google.dagger:hilt-android:${Version.HILT}"
     const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
 
@@ -38,6 +36,10 @@ object Dependencies {
 
     const val ACTIVITY_EXT = "androidx.activity:activity-ktx:1.3.1"
     const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:1.3.6"
+}
+
+object GlideDependencies {
+    private const val GLIDE_VER = "4.12.0"
 
     const val GLIDE = "com.github.bumptech.glide:glide:$GLIDE_VER"
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:$GLIDE_VER"
