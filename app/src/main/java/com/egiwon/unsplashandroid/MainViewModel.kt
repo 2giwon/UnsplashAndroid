@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.egiwon.domain.usecase.GetRandomImageUseCase
 import com.egiwon.unsplashandroid.vo.PhotoVO
-import com.egiwon.unsplashandroid.vo.toPhotoVO
+import com.egiwon.unsplashandroid.vo.PhotoVO.Companion.toPhotoVO
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -16,10 +16,10 @@ class MainViewModel @Inject constructor(
     private val useCase: GetRandomImageUseCase
 ) : ViewModel() {
 
-    private val _image = MutableLiveData<PhotoVO>()
-    val image: LiveData<PhotoVO> get() = _image
+    private val _photo = MutableLiveData<PhotoVO>()
+    val photo: LiveData<PhotoVO> get() = _photo
 
     fun getRandomImage() = viewModelScope.launch {
-        _image.value = useCase.getRandomImage().toPhotoVO()
+        _photo.value = useCase.getRandomImage().toPhotoVO()
     }
 }
