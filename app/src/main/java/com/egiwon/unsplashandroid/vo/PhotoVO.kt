@@ -12,18 +12,21 @@ data class PhotoVO(
     val views: Int = 0,
     val width: Int = 0,
     val height: Int = 0
-)
-
-fun PhotoData.toPhotoVO(): PhotoVO {
-    return PhotoVO(
-        id = id,
-        likes = likes,
-        fullImageUrl = fullImageUrl,
-        regularImageUrl = regularImageUrl,
-        smallImageUrl = smallImageUrl,
-        thumb = thumb,
-        views = views,
-        width = width,
-        height = height
-    )
+) {
+    companion object {
+        fun PhotoData.toPhotoVO(): PhotoVO {
+            return PhotoVO(
+                id = id,
+                likes = likes,
+                fullImageUrl = fullImageUrl,
+                regularImageUrl = regularImageUrl,
+                smallImageUrl = smallImageUrl,
+                thumb = thumb,
+                views = views,
+                width = width,
+                height = height
+            )
+        }
+    }
 }
+
