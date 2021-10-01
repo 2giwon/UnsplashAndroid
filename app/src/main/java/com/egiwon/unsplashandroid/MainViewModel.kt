@@ -23,10 +23,12 @@ class MainViewModel @Inject constructor(
     val errorMessage: LiveData<String> get() = _errorMessage
 
     fun getRandomImage() = viewModelScope.launch {
-        try {
-            _photo.value = useCase.getRandomImage().toPhotoVO()
-        } catch (ex: Exception) {
-            _errorMessage.value = ex.message
-        }
+        useCase.getRandomImage()
+            .onSuccess {
+                _photo.value = it.toPhotoVO()
+            }.onFailure {
+                _errorMessage.value = it.message
+            }
+
     }
 }
