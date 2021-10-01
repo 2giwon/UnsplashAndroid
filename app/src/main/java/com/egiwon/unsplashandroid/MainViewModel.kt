@@ -8,6 +8,7 @@ import com.egiwon.domain.usecase.GetRandomImageUseCase
 import com.egiwon.unsplashandroid.vo.PhotoVO
 import com.egiwon.unsplashandroid.vo.PhotoVO.Companion.toPhotoVO
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -22,7 +23,11 @@ class MainViewModel @Inject constructor(
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> get() = _errorMessage
 
-    fun getRandomImage() = viewModelScope.launch {
+    private val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        _errorMessage.value = throwable.message
+    }
+
+    fun getRandomImage() = viewModelScope.launch(coroutineExceptionHandler) {
         useCase.getRandomImage()
             .onSuccess {
                 _photo.value = it.toPhotoVO()
