@@ -4,11 +4,11 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 
-@BindingAdapter("urlToGlide")
-fun ImageView.urlToGlide(url: String?) {
+@BindingAdapter("app:urlToGlide")
+fun urlToGlide(imageView: ImageView, url: String?) {
     if (!url.isNullOrEmpty()) {
-        Glide.with(this)
+        Glide.with(imageView)
             .load(url)
-            .into(this)
+            .into(imageView)
     }
 }
