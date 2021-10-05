@@ -1,6 +1,6 @@
 object Version {
     const val KOTLIN_VER = "1.4.10"
-    const val HILT = "2.35"
+    const val HILT = "2.38.1"
 }
 
 object ProjectConfig {
@@ -21,13 +21,10 @@ object AndroidConfig {
 }
 
 object Dependencies {
-    private const val HILT_JETPACK_VER = "1.0.0-alpha03"
-
     const val HILT_ANDROID = "com.google.dagger:hilt-android:${Version.HILT}"
     const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
 
-    const val DAGGER_HILT_LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
-    const val HILT_COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
+    const val HILT_COMPILER = "com.google.dagger:hilt-compiler:${Version.HILT}"
     const val HILT_CORE = "com.google.dagger:hilt-core:${Version.HILT}"
 
     const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Version.KOTLIN_VER}"
@@ -36,6 +33,16 @@ object Dependencies {
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.1.0"
 
     const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+
+    const val ACTIVITY_EXT = "androidx.activity:activity-ktx:1.3.1"
+    const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:1.3.6"
+}
+
+object GlideDependencies {
+    private const val GLIDE_VER = "4.12.0"
+
+    const val GLIDE = "com.github.bumptech.glide:glide:$GLIDE_VER"
+    const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:$GLIDE_VER"
 }
 
 object NetworkConfig {
