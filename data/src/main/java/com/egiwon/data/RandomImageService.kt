@@ -1,4 +1,4 @@
-package com.egiwon.data.datasource
+package com.egiwon.data
 
 import com.egiwon.data.response.RandomImageResponse
 import retrofit2.http.GET

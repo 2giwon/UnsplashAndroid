@@ -1,6 +1,6 @@
 package com.egiwon.data.di
 
-import com.egiwon.data.ImageDataSource
+import com.egiwon.data.ImageRepositoryImpl
 import com.egiwon.domain.ImageRepository
 import dagger.Binds
 import dagger.Module
@@ -14,5 +14,5 @@ internal abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindImageRepository(imageDataSource: ImageDataSource): ImageRepository
+    abstract fun bindImageRepository(repository: ImageRepositoryImpl): ImageRepository
 }

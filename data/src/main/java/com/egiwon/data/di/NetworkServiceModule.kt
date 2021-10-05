@@ -1,6 +1,6 @@
 package com.egiwon.data.di
 
-import com.egiwon.data.datasource.RandomImageService
+import com.egiwon.data.RandomImageService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
